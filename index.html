@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quotes Page</title>
+
+    <style>
+
+        body {
+            background-color: #edf2f7;
+            font-family: Georgia;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .box {
+            background-color: white;
+            width: 60%;
+            margin: auto;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            color: #5b6ee1;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .line {
+            width: 80px;
+            height: 4px;
+            background-color: #ff9f68;
+            margin: auto;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 25px;
+            margin: 30px 0;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        button {
+            background-color: #5b6ee1;
+            color: white;
+            border: none;
+            padding: 13px 24px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #4455bb;
+            transform: scale(1.05);
+        }
+
+        .small-text {
+            color: gray;
+            font-size: 14px;
+            margin-top: 25px;
+        }
+
+        .top-text {
+            color: #777;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <div class="icon">☁️</div>
+
+        <div class="top-text">
+            Positive thoughts everyday
+        </div>
+
+        <h1>Daily Quotes</h1>
+
+        <div class="line"></div>
+
+        <p id="quote">
+            "Success starts with self-confidence."
+        </p>
+
+        <button onclick="changeQuote()">
+            New Quote
+        </button>
+
+        <div class="small-text">
+            Make today meaningful ✨
+        </div>
+
+    </div>
+
+    <script>
+
+        let quotes = [
+
+            "Success starts with self-confidence.",
+
+            "Dream big and work hard.",
+
+            "Every day is a new opportunity.",
+
+            "Believe in yourself.",
+
+            "Small steps lead to big results.",
+
+            "Your future depends on what you do today."
+
+        ];
+
+        function changeQuote() {
+
+            let random =
+            Math.floor(Math.random() * quotes.length);
+
+            document.getElementById("quote").innerHTML =
+            quotes[random];
+        }
+
+    </script>
+
+</body>
+</html>
